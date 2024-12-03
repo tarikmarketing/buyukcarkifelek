@@ -1,0 +1,84 @@
+
+/* Mevcut tasarım için eklenen CSS */
+
+/* Mobil Arka Plan Görünümü */
+body {
+    background: url('main-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Çevir Butonu */
+.my-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.my-btn:hover {
+    background-color: #45a049;
+}
+
+/* Sağdaki Karakter */
+.character {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    background: url('figure_4.png') no-repeat center center / contain;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+/* Soldaki Görsel */
+.left-image {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    background: url('figure_4.png') no-repeat center center / contain;
+    z-index: 10;
+}
+
+/* Karakter Yukarı Aşağı Hareketi */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Fullscreen Pop-up Style */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.popup.active {
+    display: flex;
+}
